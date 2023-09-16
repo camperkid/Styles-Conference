@@ -48,11 +48,39 @@ table {
 	border-spacing: 0;
 }
 
+
 /* Grid */
 *, *::before, *::after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.col-1-2 {
+	width: 50%;
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.group, .col-1-2, .col-1-3 {
+	float: left;
+	padding: 1.5%;
+}
+
+.group::before, .group::after {
+	content: "";
+	display: table;
+}
+
+.group::after {
+	clear: both;
+}
+
+.group {
+	clear: both;
+	/* *zoom: 1; */
 }
 
 .container {
@@ -61,6 +89,7 @@ table {
 	padding-right: 30px;
 	width: 960px;
 }
+
 
 
 /* Typography */
